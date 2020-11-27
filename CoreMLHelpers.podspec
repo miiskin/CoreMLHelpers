@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.authors      = { "Matthijs Hollemans" => "matt@machinethink.net" }
   s.source       = { :git => "https://github.com/hollance/CoreMLHelpers.git", :branch => 'master'}
   s.source_files  = "CoreMLHelpers/**/*"
-  s.platform = :ios, '11.0'
-  s.ios.deployment_target = '11.0'
+  s.platform = :ios, '10.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
 end
