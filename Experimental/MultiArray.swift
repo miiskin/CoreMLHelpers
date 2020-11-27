@@ -27,6 +27,7 @@ import Swift
 /**
  Wrapper around MLMultiArray to make it more Swifty.
 */
+@available(iOS 11.0, *)
 public struct MultiArray<T: MultiArrayType> {
   public let array: MLMultiArray
   public let pointer: UnsafeMutablePointer<T>
@@ -144,6 +145,7 @@ public struct MultiArray<T: MultiArrayType> {
   }
 }
 
+@available(iOS 11.0, *)
 extension MultiArray: CustomStringConvertible {
   public var description: String {
     return description([])
@@ -188,6 +190,7 @@ extension MultiArray: CustomStringConvertible {
   }
 }
 
+@available(iOS 11.0, *)
 extension MultiArray {
   /**
    Converts the multi-array into an array of RGBA pixels.
@@ -254,6 +257,7 @@ extension MultiArray {
   }
 }
 
+@available(iOS 11.0, *)
 extension MultiArray {
   /**
    Converts the multi-array to a CGImage.
@@ -307,6 +311,7 @@ extension MultiArray {
 
 import UIKit
 
+@available(iOS 11.0, *)
 extension MultiArray {
   /**
     Converts the multi-array to a UIImage.

@@ -22,6 +22,7 @@
 
 import CoreML
 
+@available(iOS 11.0, *)
 extension MLMultiArray {
   /**
     Returns a new MLMultiArray with the specified dimensions.

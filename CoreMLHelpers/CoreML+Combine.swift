@@ -21,6 +21,7 @@
 */
 
 import CoreML
+#if canImport(Combine)
 import Combine
 
 @available(iOS 13.0, tvOS 13.0, OSX 10.15, *)
@@ -58,3 +59,5 @@ extension Publisher where Self.Output: MLFeatureProvider {
     tryMap { input in try model.prediction(from: input) }
   }
 }
+
+#endif

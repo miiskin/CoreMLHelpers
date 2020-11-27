@@ -22,6 +22,7 @@
 
 import CoreML
 
+@available(iOS 11.0, *)
 extension MLModel {
   /**
     Returns the MLImageConstraint for the given model input, or nil if that

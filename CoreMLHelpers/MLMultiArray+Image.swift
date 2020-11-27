@@ -23,6 +23,7 @@
 import Accelerate
 import CoreML
 
+@available(iOS 11.0, *)
 public protocol MultiArrayType: Comparable {
   static var multiArrayDataType: MLMultiArrayDataType { get }
   static func +(lhs: Self, rhs: Self) -> Self
@@ -33,21 +34,25 @@ public protocol MultiArrayType: Comparable {
   var toUInt8: UInt8 { get }
 }
 
+@available(iOS 11.0, *)
 extension Double: MultiArrayType {
   public static var multiArrayDataType: MLMultiArrayDataType { return .double }
   public var toUInt8: UInt8 { return UInt8(self) }
 }
 
+@available(iOS 11.0, *)
 extension Float: MultiArrayType {
   public static var multiArrayDataType: MLMultiArrayDataType { return .float32 }
   public var toUInt8: UInt8 { return UInt8(self) }
 }
 
+@available(iOS 11.0, *)
 extension Int32: MultiArrayType {
   public static var multiArrayDataType: MLMultiArrayDataType { return .int32 }
   public var toUInt8: UInt8 { return UInt8(self) }
 }
 
+@available(iOS 11.0, *)
 extension MLMultiArray {
   /**
     Converts the multi-array to a CGImage.
@@ -240,6 +245,7 @@ extension MLMultiArray {
 
   - Returns: a new CGImage or nil if the conversion fails
 */
+@available(iOS 11.0, *)
 public func createCGImage(fromFloatArray features: MLMultiArray,
                           min: Float = 0,
                           max: Float = 255) -> CGImage? {
@@ -299,6 +305,7 @@ public func createCGImage(fromFloatArray features: MLMultiArray,
 
 import UIKit
 
+@available(iOS 11.0, *)
 extension MLMultiArray {
   public func image(min: Double = 0,
                     max: Double = 255,
@@ -309,6 +316,7 @@ extension MLMultiArray {
   }
 }
 
+@available(iOS 11.0, *)
 public func createUIImage(fromFloatArray features: MLMultiArray,
                           min: Float = 0,
                           max: Float = 255) -> UIImage? {

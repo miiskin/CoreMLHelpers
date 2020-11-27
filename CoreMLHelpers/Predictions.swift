@@ -36,6 +36,7 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
   Returns the top `k` predictions from Vision classification results as an
   array of `(String, Double)` pairs.
 */
+@available(iOS 11.0, *)
 public func top(_ k: Int, _ observations: [VNClassificationObservation]) -> [(String, Double)] {
   // The Vision observations are sorted by confidence already.
   return observations.prefix(through: min(k, observations.count) - 1)
